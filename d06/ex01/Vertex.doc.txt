@@ -1,0 +1,40 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles colored points.
+
+An instance can be constructed from an array containing at least x, y, z keys
+    new Vertex( array('x' => 0.0, 'y' => 0.0, 'z' => 0.0) );
+
+You can specify two optionnal keys:
+    *   'w' => 0.0;
+    *   'color' => new Color();
+
+If not specified the _w attribute is will be equal to 1.0.
+If not specified the color attribute will be an new Color instance,
+    with a white rgb code.
+
+The attributes _x, _y, _z, _w are converted to float before stocked.
+
+<------------------------------------------------------------------------------>
+
+The class provides the following methods:
+
+Setters, to change the attributes values:
+    public function set_x($x);
+    public function set_y($y);
+    public function set_z($z);
+    public function set_w($w);
+    public function set_color($red, $green, $blue);
+
+NB : set_color convert $red, $green and $blue to int before using.
+
+Getters, to recover attribute values:
+    public function get_x();
+    public function get_y();
+    public function get_z();
+    public function get_w();
+    public function get_color();
+
+NB : get_color return an array, contaning the keys 'red', 'green' and 'blue'.
+
+---------------------------------------------------------------------- Vertex ->

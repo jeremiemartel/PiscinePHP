@@ -1,0 +1,41 @@
+body{
+	background-image: url(https://cdn.static01.nicematin.com/media/npo/mobile_1440w/2018/03/tgv-sncf-gare-nice.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.niveau1{
+	text-align: center;
+	font-weight: bold;
+}
+
+.niveau2{
+	text-align: center;
+	font-weight: 300;
+}
+
+li{
+	list-style-type: none;
+}
+
+ul li{
+	display: block;
+}
+
+ul a{
+	text-decoration: none;
+	color: black;
+}
+
+ul ul{
+	display: none;
+}
+
+ul li:hover ul{
+	display: block;
+}
+
+ul li:hover{
+	display: block;
+}
+

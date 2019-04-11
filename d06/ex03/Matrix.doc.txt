@@ -1,0 +1,43 @@
+
+<- Matrix ----------------------------------------------------------------------
+
+The Matrix class handles 4 by 4 matrices, defined from preseted matrices.
+
+An isntance can be constructed from an array, containg a 'preset' key,
+    containing one of t he following constant value:
+        *   Matrix::IDENTITY    : Create an identity matrix
+        *   Matrix::SCALE       : Create a scaling change matrix
+        *   Matrix::RX          : Creating a Ox rotation matrix
+        *   Matrix::RY          : Creating a Oy rotation matrix
+        *   Matrix::RZ          : Creating a Oz rotation matrix
+        *   Matrix::TRANSLATION : Creating translation matrix
+        *   Matrix::PROJECTION  : Creating projection matrix
+
+Some of this preseted matrices need more arguments, sent as key => values:
+    *   SCALE : 'scale' => float scale factor
+    *   RX, RY, RZ : 'angle' => float radian angle of rotation
+    *   TRANSLATION : 'vtc' => Vector of translation
+    *   PROJECTION :
+            -   'fov' : float degree angle of projection
+            -   'ratio' : float image ratio
+            -   'near' : float near clipping plan of projection
+            -   'far' : float far clipping plan of projection
+
+Matrix class contain a static boolean Vector::$verbose, containing FALSE by default.
+If verbose is set to TRUE, informations would be printed when calling construct
+and desctruct.
+
+<------------------------------------------------------------------------------>
+
+The class provide the following methods:
+
+Matrix mult( Matrix $rhs )
+    Return a new Matrix, result of the multiplication of the instance and rhs
+
+Vertex transformVertex( Vertex $vtx )
+    Return a new Matrix, result of the multiplication of the instance and vtx
+
+NB: A Matrix can't be modified, if methods is supposed to return a Matrix
+it returns new Matrix instance.
+
+---------------------------------------------------------------------- Matrix ->

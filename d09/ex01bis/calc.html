@@ -1,0 +1,107 @@
+<!doctype html>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body
+			{
+				text-align: center;
+			}
+			.input
+			{
+				width: 20%;
+				height: 5%;
+			}
+			.select
+			{
+				width: 5%;
+				height: 5%;
+			}
+			#input1:{}
+			#select1:{}
+			#input2:{}
+		</style>
+	</head>
+	<body>
+		<input class="input" id="input1" type="text" value="" placeholder="number" autofocus>
+		<select id="select1">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input class="input" id="input2" type="text" value="" placeholder="number">
+		<input class="input" type="button" value="Try Me!" onclick='calcul()'>
+	</body>
+</html>
+
+<script>
+	$(document).ready(function (){
+		var_input1 = $("#input1");
+		var_input2 = $("#input2");
+		var_select1 = $("#select1");
+	})
+</script>
+
+<script type="text/javascript">
+	function calcul()
+	{
+		var res;
+		input1 = var_input1.val();
+		input2 = var_input2.val();
+		select1 = var_select1.val();
+		console.log(input1 + " " + select1 + " " + input2);
+		if (input1 == "" || input2 == "" || isNaN(input1) || isNaN(input2))
+			res = "Error :(";
+		else
+		{
+			input1 = parseInt(input1);
+			input2 = parseInt(input2);
+			if (input1 < 0 || input2 < 0)
+				res = "Error :(";
+			else
+			{
+
+				switch(select1)
+				{
+					case '+':
+						res = input1 + input2;
+						break ;
+					case '-':
+						res = input1 - input2;
+						break ;
+					case '*':
+						res = input1 * input2;
+						break ;
+					case '/':
+						if (input2 == 0)
+							res = "It’s over 9000!";
+						else 
+							res = input1 / input2;
+						break ;				
+					case '%':
+						if (input2 == 0)
+							res = "It’s over 9000!";
+						else
+							res = input1 % input2;
+						break ;
+					default:
+						res = 'Invalid operand';
+						break ;
+				}				
+			}
+		}
+		alert(res);
+		console.log(res);
+	}
+</script>
+
+<script type="text/javascript">
+	function harcelement(){setInterval(function(){alert("Please, use me ...")}, 30000);}
+	harcelement();
+</script>

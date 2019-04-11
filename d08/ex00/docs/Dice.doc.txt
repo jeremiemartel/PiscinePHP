@@ -1,0 +1,8 @@
+<- Dice  ----------------------------------------------------------------------
+The Dice class handles dices launchs.
+
+Any instance of Dice provides the following methods :
+    int public function launch($d = 6):
+        return a random numbre between 1 and $d, incldued
+
+---------------------------------------------------------------------- Dice  ->

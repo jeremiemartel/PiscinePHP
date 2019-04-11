@@ -1,0 +1,51 @@
+
+<- Vector ----------------------------------------------------------------------
+The Vector class handles vectors defined from two Vertices.
+
+An instance can be constructed from array containing between on and two vertices:
+    *   'dest' => Vertex()
+    [ * 'orig' => Vertex() ]
+
+If not specified, orig is filled by a null (x = 0.0, y = 0.0, z = 0.0, w = 1.0) Vertex.
+
+The _w attributes is always set to 0.0.
+
+Vector class contain a static boolean Vector::$verbose, containing FALSE by default.
+If verbose is set to TRUE, informations would be printed when calling construct
+and desctruct.
+
+<------------------------------------------------------------------------------>
+
+The class provide the following methods:
+
+float  function magnitude():
+    Return instance magnitude.
+
+Vector function normalize()
+    Return a new vector normalized, or a clone if already normalized.
+
+Vector function add(Vector $rhs)
+    Add two Vectors.
+
+Vector function sub(Vector $rhs)
+    Substract $rhs to the instance.
+
+Vector function opposite()
+    Return the opposite vector of the instance.
+
+Vector function scalarProduct($k)
+    Return the sclar product of the instance and a number.
+
+float  function dotProduct(Vector $rhs)
+    Return the scalar Product of the Instance (on Left) and rhs (Right member)
+
+float  function cos(Vector $rhs)
+    Return cosinus of the angle of instance and rhs
+
+Vector function crossProduct(Vector $rhs)
+    Return vector product from instance and rhs.
+
+NB: A vector can't be modified, if methods is supposed to return a Vector
+it returns new Vector instance.
+
+---------------------------------------------------------------------- Vector ->

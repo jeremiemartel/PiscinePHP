@@ -1,0 +1,70 @@
+img
+{
+	display: block;
+	width: 200px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table
+{
+	border: none;
+	border-collapse: collapse;
+	/*Three next balises allow to align table to center*/
+	margin-left: auto;
+	margin-right: auto;
+	max-width:2000px;
+	width: 80%;
+	height: 60%;
+}
+th
+{
+	background-color: rgba(116, 241, 14, 0.452);
+	width: auto;
+}
+td, th
+{
+	padding-bottom: 0.2vh;
+	padding-top: 0.2vh;
+	text-align: center;
+	vertical-align: middle;
+	border: thin solid black;
+	width: auto;
+}
+
+.vide
+{
+	border:unset;
+	background-color: white;
+}
+.element{background-color: rgba(0, 255, 255, 0.404);}
+
+.solide{color: black;}
+.liquid{color: #1100AA;}
+.gazeux{color: rgb(238, 52, 52);}
+
+.alcal{background-color: #dbd81690;}
+.alcat{background-color: #db6e0890;}
+.otmet{background-color: #19470d90}
+.metal{background-color: #d312a990;}
+.nomet{background-color: #24a05c90}
+.halog{background-color: #2bd11c90;}
+.noble{background-color: #70326890;}
+.lanth{background-color: #0aaffc90;}
+.actin{background-color: #504d4f90;}
+
+.alias{
+	background-color: white;
+	border:none;}
+
+strong{
+	font-weight: bold;
+	font-size: 2vmin;}
+
+p{
+	font-size: 1.2vmin;
+	line-height: 0vmin;}
+
+.number{text-align:left;}
+.mass{text-align: right;}
