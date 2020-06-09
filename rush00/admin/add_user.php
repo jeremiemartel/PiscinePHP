@@ -16,9 +16,7 @@
 		header("Location: /");
 		exit ;
 	}
-?>
 
-<?php
 	function create_user()
 	{
 		if (($serial_tab = db_get("../Datas/users.db")) === FALSE)
@@ -43,9 +41,7 @@
 		header("Location: /admin/panel.php");
 		exit ;
 	}
-?>
 
-<?php
 	function check_input()
 	{
 		if (safe_user_type($_POST[USER_TYPE]) === FALSE)
@@ -75,9 +71,7 @@
 		}
 		return TRUE;
 	}
-?>
 
-<?php
 	if ($_POST["submit"] === "OK")
 	{
 		if (check_input() === TRUE)

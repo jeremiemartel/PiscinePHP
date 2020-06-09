@@ -15,9 +15,7 @@
 		header("Location: /");
 		exit ;
 	}
-?>
 
-<?php
 	if ($_POST["db"] === "user")
 	{
 		$db_path = "../Datas/users.db";

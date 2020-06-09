@@ -16,9 +16,7 @@
 		header("Location: /");
 		exit ;
 	}
-?>
 
-<?php
 	function mod_article()
 	{
 		if (($serial_tab = db_get("../Datas/articles.db")) === FALSE)
@@ -45,9 +43,7 @@
 		header("Location: /admin/panel.php");
 		exit ;
 	}
-?>
 
-<?php
 	function get_categories()
 	{
 		global $db;
@@ -69,9 +65,7 @@
 		}
 		return $res;
 	}
-?>
 
-<?php
 	function check_input()
 	{
 		if (safe_article_name($_POST[ARTICLE_NAME]) === FALSE)
@@ -96,9 +90,7 @@
 		}
 		return TRUE;
 	}
-?>
 
-<?php
 	if ($_POST["submit"] === "OK")
 	{
 		if (check_input() === TRUE)
@@ -107,9 +99,7 @@
 				mod_article();
 		}
 	}
-?>
 
-<?php
 	if (($serial_tab = db_get("../Datas/articles.db")) === FALSE)
 	{
 		header("Location: /error/500.html");
