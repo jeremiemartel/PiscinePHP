@@ -93,8 +93,8 @@
 	<div id="invisible"></div>
 		<h1 class="form_title">Welcome, please login</h1>
 		<form action="./login.php" method="POST" target="_self" class="basic_form">
-			<input class="basic_input" type="text" name="login" placeholder="login" <?php echo 'value="'.$_POST[login].'"'; if (empty($_POST[login])) echo "autofocus";?> required/>
-			<input class="basic_input" type="password" name="passwd" <?php if (!empty($_POST[login])) echo "autofocus"; ?> placeholder="password" required/>
+			<input class="basic_input" type="text" name="login" placeholder="login" <?php if (empty($_POST["login"])) echo "autofocus"; else echo 'value="'.$_POST["login"].'"'; ?> required/>
+			<input class="basic_input" type="password" name="passwd" <?php if (!empty($_POST["login"])) echo "autofocus"; ?> placeholder="password" required/>
 			<input class="basic_input basic_button" type="submit" name="submit" value="OK" />
 		</form>
 	</body>
